@@ -1,5 +1,4 @@
 import React from 'react'
-import { Component } from 'react';
 import './DragAndDropBox.css'
 
 
@@ -35,8 +34,8 @@ export default class DragAndDropBox extends React.Component {
 
          });
   
-         // updating state
-
+         // updating state with the tasks, 
+         //the property "category" will have been updated based on the column the task was dropped in
          this.setState({
              ...this.state,
              tasks
@@ -66,7 +65,7 @@ render () {
         <div className="row">
 
             {/* These columns will be turned into column components */}
-            <div className="in-progress dnd-col"
+            <div className="backlog dnd-col"
                   onDragOver={(e)=> this.onDragOver(e)}
                   onDrop={(e)=> {this.onDrop(e, "backlog")}}>
                     <h1 className="task-header">BACKLOG</h1>
