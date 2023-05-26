@@ -55,9 +55,23 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
     border-radius: 20px;
     transition: 0.3s ease;
 }
+
 .navbar-links {display: flex;}
 .navbar-links li {margin-left: 15px;}
 .navbar a:hover {background-color: #555;}
+.navbar-links button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .navbar-links button:hover {
+    background-color: #555;
+  }
 
 /*Row Styling and Alignment*/
 .row{
@@ -66,7 +80,6 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
     width: 100%;
     display: flex;
     justify-content: center;
-
 }
 
 /*Column Styling*/
@@ -105,4 +118,3 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
     margin: 5px;
     text-align: center;
 }
-

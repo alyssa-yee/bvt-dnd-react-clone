@@ -4,6 +4,7 @@ import './DragAndDropBox.css'
 
 
 export default class DragAndDropBox extends React.Component {
+  //default states
   state = {
     tasks: [
       { id: 1, name: "Learn Angular", columnId: 1, bgcolor: "red" },
@@ -90,7 +91,7 @@ export default class DragAndDropBox extends React.Component {
 
   render () {       
     const { columns, tasks } = this.state;
-    
+
     // Render column components
     const columnComponents = columns.map((column) => (
       <div
@@ -121,19 +122,22 @@ export default class DragAndDropBox extends React.Component {
     ));
       return (
         <div className="dnd-box-container" id="">
-        {/* <nav className="navbar">
-          <div className="navbar-title">Your Title</div>
-          <ul className="navbar-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav> */}
-        <button onClick={this.onAddColumn}>Add Column</button>
-        <button onClick={this.resetPage}>Reset Page</button>
-        <div className="row">{columnComponents}</div>
-      </div>
+
+          <nav className="navbar">
+            <div className="navbar-title">Your Title</div>
+            <ul className="navbar-links">
+              <li><button onClick={this.onAddColumn}>Add Column</button></li>
+              <li><button onClick={this.resetPage}>Reset Page</button></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          
+          {/* <button onClick={this.onAddColumn}>Add Column</button>
+          <button onClick={this.resetPage}>Reset Page</button> */}
+          <div className="row">{columnComponents}</div>
+
+        </div>
     );
   }
 }
