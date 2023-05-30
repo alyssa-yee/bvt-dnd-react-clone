@@ -123,15 +123,16 @@ export default class DragAndDropBox extends React.Component {
       return (
         <div className="dnd-box-container" id="">
 
+          <div>
           <nav className="navbar">
-            <div className="navbar-title">Your Title</div>
+            <div className="navbar-title">SCRUMBOARD</div>
             <ul className="navbar-links">
               <li><button onClick={this.onAddColumn}>Add Column</button></li>
               <li><button onClick={this.resetPage}>Reset Page</button></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#"></a></li>
             </ul>
           </nav>
+          </div>
           
           {/* <button onClick={this.onAddColumn}>Add Column</button>
           <button onClick={this.resetPage}>Reset Page</button> */}
